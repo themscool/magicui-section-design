@@ -57,14 +57,14 @@ export default function NavigationMenuDemo() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hover:bg-themePrimary/10 bg-transparent focus:bg-themePrimary/10 hover:rounded-md">
           <NavigationMenuTrigger>Link One</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-themePrimary/10 from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     <Icons.logo className="h-6 w-6" />
@@ -79,13 +79,13 @@ export default function NavigationMenuDemo() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
+              <ListItem href="/docs" title="Introduction" className="hover:bg-themePrimary/10">
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
+              <ListItem href="/docs/installation" title="Installation" className="hover:bg-themePrimary/10">
                 How to install dependencies and structure your app.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
+              <ListItem href="/docs/primitives/typography" title="Typography" className="hover:bg-themePrimary/10">
                 Styles for headings, paragraphs, lists...etc
               </ListItem>
             </ul>
@@ -100,6 +100,7 @@ export default function NavigationMenuDemo() {
                   key={component.title}
                   title={component.title}
                   href={component.href}
+                  className="hover:bg-themePrimary/10"
                 >
                   {component.description}
                 </ListItem>
@@ -108,7 +109,7 @@ export default function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="https://magicui.design/" target="_arya" legacyBehavior passHref>
+          <Link href="https://magicui.design/" target="_arya" legacyBehavior passHref >
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Documentation
             </NavigationMenuLink>

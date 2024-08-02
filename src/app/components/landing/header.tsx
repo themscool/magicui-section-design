@@ -27,7 +27,7 @@ const header = () => {
 
             <div className="desktop-menu hidden lg:block">
               <div className="flex items-center ">
-                <nav >
+                <nav  className="mr-10">
                   <Menu />
                 </nav>
 
