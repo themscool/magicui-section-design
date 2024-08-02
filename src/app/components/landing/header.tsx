@@ -25,7 +25,7 @@ const header = () => {
               </a>
             </div>
 
-            <div className="desktop-menu hidden md:block">
+            <div className="desktop-menu hidden lg:block">
               <div className="flex items-center ">
                 <nav >
                   <Menu />
@@ -41,7 +41,7 @@ const header = () => {
                 </div>
               </div>
             </div>
-            <div className="mobile-menu cursor-pointer block md:hidden">
+            <div className="mobile-menu cursor-pointer block lg:hidden">
               <IoMenuSharp className="text-2xl text-themeDarkGray" />
             </div>
           </div>

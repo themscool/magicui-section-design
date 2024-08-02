@@ -52,7 +52,7 @@ const listing = () => {
           </div>
           <div className="right-side">
              <div className="img-container ">
-                <img src={imgContainer.src} alt="image-container" className="w-auto h-[100%]" />
+                <img src={imgContainer.src} alt="image-container" className="w-auto h-[100%] mx-auto" />
              </div>
           </div>
         </div>

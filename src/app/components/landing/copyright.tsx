@@ -9,9 +9,9 @@ const copyright = () => {
             </div>
             <div className="links-widget">
               <ul className='flex justify-start md:justify-end'>
-                <li className='mx-0 md:mx-4 text-themeDarkGray'><a href="http://" target="_blank" rel="noopener noreferrer">Link One</a></li>
-                <li className='mx-0 md:mx-4 text-themeDarkGray'><a href="http://" target="_blank" rel="noopener noreferrer">Link Two</a></li>
-                <li className='mx-0 md:mx-4 text-themeDarkGray'><a href="http://" target="_blank" rel="noopener noreferrer">Link Three</a></li>
+                <li className='mr-3 md:mx-4 text-themeDarkGray'><a href="http://" target="_blank" rel="noopener noreferrer">Link One</a></li>
+                <li className='mr-3 md:mx-4 text-themeDarkGray'><a href="http://" target="_blank" rel="noopener noreferrer">Link Two</a></li>
+                <li className='mr-3 md:mx-4 text-themeDarkGray'><a href="http://" target="_blank" rel="noopener noreferrer">Link Three</a></li>
               </ul>
             </div>
         </div>
