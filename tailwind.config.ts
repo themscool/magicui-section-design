@@ -18,6 +18,7 @@ const config = {
       },
     },
     extend: {
+      
       colors: {
         themePrimary: "#FF6C47",
         themeGray: "#E5E5E5",
