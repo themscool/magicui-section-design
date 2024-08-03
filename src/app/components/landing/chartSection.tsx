@@ -7,7 +7,7 @@ const chartSection = () => {
     <section className="max-w-6xl mx-auto flex py-16 items-center   ">
       <div className="container">
         <div className="lg:max-w-2xl mx-auto">
-          <div className="patch-content text-center">
+          <div className="text-center">
             <h2 className="text-4xl font-bold">Our Approach to UX Design</h2>
             <p className="my-5">
               Effective marketing and advertising materials. It is also a great

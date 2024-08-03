@@ -1,21 +1,14 @@
 import React from "react";
+import MarqueClient from "@/app/components/landing/marqueClient";
 
 const featurePatch = () => {
   return (
-    <section className="max-w-6xl mx-auto flex py-16 items-center   ">
+    <section className="max-w-6xl mx-auto flex py-16 items-center">
       <div className="container">
         <div className="lg:max-w-2xl mx-auto">
-          <div className="patch-content text-center">
+          <div className="text-center">
             <div className="flex items-center justify-center">
-              <div>
-                <div className="item-box w-[90px] h-[90px] bg-themeGray rounded-full sm:mx-6 mx-2"></div>
-              </div>
-              <div>
-                <div className="item-box w-[90px] h-[90px] bg-themeGray rounded-full sm:mx-6 mx-2"></div>
-              </div>
-              <div>
-                <div className="item-box w-[90px] h-[90px] bg-themeGray rounded-full sm:mx-6 mx-2"></div>
-              </div>
+              <MarqueClient />
             </div>
             <p className="my-5">
               Effective marketing and advertising materials. It is also a great

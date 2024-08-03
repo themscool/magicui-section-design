@@ -5,7 +5,7 @@ function userFlow() {
     <section className="max-w-6xl mx-auto flex py-16 items-center   ">
       <div className="container">
         <div className="lg:max-w-2xl mx-auto pb-5">
-          <div className="patch-content text-center">
+          <div className="text-center">
             <h2 className="text-4xl font-bold">
               User Flows and Navigational Structures
             </h2>
@@ -17,7 +17,7 @@ function userFlow() {
         </div>
         <div className="grid md:grid-cols-4 gap-2">
           <div className="text-center">
-            <div className="icon-container">
+            <div>
               <div className="w-[50px] h-[50px] bg-themeGray rounded-full mx-auto"></div>
             </div>
             <div className="content-info ">
@@ -26,7 +26,7 @@ function userFlow() {
             </div>
           </div>
           <div className="text-center">
-            <div className="icon-container">
+            <div>
               <div className="w-[50px] h-[50px] bg-themeGray rounded-full mx-auto"></div>
             </div>
             <div className="content-info ">
@@ -35,19 +35,19 @@ function userFlow() {
             </div>
           </div>
           <div className="text-center">
-            <div className="icon-container">
+            <div>
               <div className="w-[50px] h-[50px] bg-themeGray rounded-full mx-auto"></div>
             </div>
-            <div className="content-info ">
+            <div>
               <h4 className="font-bold text-xl my-3">Title</h4>
               <p>Effective marketing and advertising materials.</p>
             </div>
           </div>
           <div className="text-center">
-            <div className="icon-container">
+            <div>
               <div className="w-[50px] h-[50px] bg-themeGray rounded-full mx-auto"></div>
             </div>
-            <div className="content-info ">
+            <div>
               <h4 className="font-bold text-xl my-3">Title</h4>
               <p>Effective marketing and advertising materials.</p>
             </div>

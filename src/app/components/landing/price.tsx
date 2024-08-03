@@ -36,7 +36,7 @@ const price = () => {
           </div>
         </div>
         <div className="rounded-2xl  border-themePrimary border-[0.5px] py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16 relative">
-           <div className="popular-tag absolute top-0 right-0 bg-themePrimary py-1 px-4 rounded-xl flex items-center">
+           <div className="absolute top-0 right-0 bg-themePrimary py-1 px-4 rounded-xl flex items-center">
            <FaStar className="text-white" />
             <span className="text-white ml-1 font-sans font-semibold">
                 Popular

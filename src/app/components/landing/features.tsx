@@ -244,13 +244,13 @@ const Feature = ({
                     </div>
                     <div className="flex items-center relative">
                       <div>
-                        <AccordionTrigger className="item-box w-[90px] h-[90px] bg-themeGray rounded-full sm:mx-6 mx-2"> </AccordionTrigger>
+                        <div className="item-box w-[90px] h-[90px] bg-themeGray rounded-full sm:mx-6 mx-2"> </div>
                       </div>
                       <div>
                         <AccordionTrigger className="text-xl font-bold">
                           {item.title}
                         </AccordionTrigger>
-                        <AccordionTrigger className="justify-start text-left leading-4">{item.content}</AccordionTrigger>
+                        <AccordionTrigger className="justify-start text-left leading-4 font-sans text-[16px]">{item.content}</AccordionTrigger>
                       </div>
                     </div>
                   </AccordionItem>

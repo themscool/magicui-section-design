@@ -7,7 +7,7 @@ import { FaYoutube } from "react-icons/fa6";
 const footer = () => {
   return (
     <section className="max-w-6xl mx-auto py-16 sm:px-10 px-5">
-      <div className="brand-logo">
+      <div>
         <a
           href="#"
           title="brand-logo"
@@ -19,14 +19,14 @@ const footer = () => {
       </div>
 
       <div className="grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 mt-8">
-        <div className="widget-title mb-5">
+        <div className=" mb-5">
             <h4 className=" font-semibold">Title</h4>
             <ul>
                 <li className="my-2"><a href="" title="links">Link One</a> </li>
                 <li className="my-2"><a href="" title="links">Link Two</a> </li>
             </ul>
         </div>
-        <div className="widget-title mb-5">
+        <div className=" mb-5">
             <h4 className=" font-semibold">Title</h4>
             <ul>
                 <li className="my-2"><a href="" title="links">Link One</a> </li>
@@ -36,7 +36,7 @@ const footer = () => {
                 <li className="my-2"><a href="" title="links">Link Five</a> </li>
             </ul>
         </div>
-        <div className="widget-title mb-5">
+        <div className=" mb-5">
             <h4 className=" font-semibold">Title</h4>
             <ul>
                 <li className="my-2"><a href="" title="links">Link One</a> </li>
@@ -44,7 +44,7 @@ const footer = () => {
                 <li className="my-2"><a href="" title="links">Link Three</a> </li>
             </ul>
         </div>
-        <div className="widget-title mb-5">
+        <div className=" mb-5">
             <h4 className="font-semibold">Social</h4>
             <ul>
                 <li className="my-2"><a href="#" title="Twitter" className="flex items-center"> <FaTwitter className="text-themeDarkGray"/> <span className="ml-2"> Twitter</span></a></li>

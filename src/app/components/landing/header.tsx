@@ -9,8 +9,8 @@ const header = () => {
     <main>
       <header className="py-3">
         <div className="container">
-          <div className="navbar flex justify-between items-center">
-            <div className="brand-logo">
+          <div className="flex justify-between items-center">
+            <div className="">
               <a
                 href="#"
                 title="brand-logo"
@@ -25,13 +25,13 @@ const header = () => {
               </a>
             </div>
 
-            <div className="desktop-menu hidden lg:block">
+            <div className=" hidden lg:block">
               <div className="flex items-center ">
                 <nav  className="mr-10">
                   <Menu />
                 </nav>
 
-                <div className="call-actions ">
+                <div className="">
                   <button className="py-2 px-5 border rounded-lg font-semibold hover:bg-themePrimary hover:text-white ">
                     Button
                   </button>
@@ -41,7 +41,7 @@ const header = () => {
                 </div>
               </div>
             </div>
-            <div className="mobile-menu cursor-pointer block lg:hidden">
+            <div className=" cursor-pointer block lg:hidden">
               <IoMenuSharp className="text-2xl text-themeDarkGray" />
             </div>
           </div>

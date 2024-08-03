@@ -11,6 +11,16 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+const companies = [
+  "Google",
+  "Microsoft",
+  "Amazon",
+  "Netflix",
+  "YouTube",
+  "Instagram",
+  "Uber",
+  "Spotify",
+];
 
 
 export default function CarouselDemo() {
@@ -19,10 +29,10 @@ export default function CarouselDemo() {
       <Carousel>
         <div className="max-w-2xl mx-auto">
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
+            {Array.from({ length: 7 }).map((_, index) => (
               <CarouselItem key={index}>
                 <div className="p-1">
-                  <div className="quote-icons text-center">
+                  <div className=" text-center">
                     <MdOutlineFormatQuote className="text-4xl text-themeDarkGray my-4 mx-auto" />
                     <h4 className="text-1xl font-semibold">
                       There is a lot of exciting stuff going on in the stars
@@ -31,19 +41,22 @@ export default function CarouselDemo() {
                       “living” thing because you just never know what you are
                       going to see on any given night of stargazing.
                     </h4>
-                    <div className="client-logo mt-8">
+                    <div className="mt-8">
                       <img
-                        src={Google.src}
-                        alt="Client Logo"
-                        className="mx-auto w-auto h-[40px]"
+                        key={index}
+                        src={`https://cdn.magicui.design/companies/${
+                          companies[index % companies.length]
+                        }.svg`}
+                        alt={`${companies[index % companies.length]} Logo`}
+                        className="mx-auto w-auto h-[40px] grayscale opacity-30"
                       />
                     </div>
-                    <div className="client-name">
+                    <div className="">
                       <h4 className="text-1xl font-semibold my-2">
                         Leslie Alexander
                       </h4>
                     </div>
-                    <div className="client-position mb-3">
+                    <div className=" mb-3">
                       <span className="text-sm text-themeDarkGray">
                         UI Designer
                       </span>
@@ -57,10 +70,10 @@ export default function CarouselDemo() {
             ))}
           </CarouselContent>
         </div>
-       <div className="md:block hidden">
-       <CarouselPrevious />
-       <CarouselNext />
-       </div>
+        <div className="md:block hidden">
+          <CarouselPrevious />
+          <CarouselNext />
+        </div>
       </Carousel>
     </div>
   );
