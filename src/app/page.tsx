@@ -1,7 +1,6 @@
 import HeaderSection from '@/app/components/landing/header'
 import Banner from '@/app/components/landing/banner'
 import FeaturePatch from '@/app/components/landing/featurePatch'
-// import Listing from '@/app/components/landing/listing'
 import ChartSection from '@/app/components/landing/chartSection'
 import UserFlow from '@/app/components/landing/userFlow'
 import Review from '@/app/components/landing/review'
