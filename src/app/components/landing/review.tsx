@@ -1,7 +1,6 @@
 import * as React from "react";
 import { MdOutlineFormatQuote } from "react-icons/md";
-import Google from "../../../../public/assets/google.svg";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import Image from "next/image";
 
 import {
   Carousel,
@@ -22,7 +21,6 @@ const companies = [
   "Spotify",
 ];
 
-
 export default function CarouselDemo() {
   return (
     <div className="max-w-5xl mx-auto pb-16">
@@ -42,7 +40,9 @@ export default function CarouselDemo() {
                       going to see on any given night of stargazing.
                     </h4>
                     <div className="mt-8">
-                      <img
+                      <Image
+                        width={0}
+                        height={40}
                         key={index}
                         src={`https://cdn.magicui.design/companies/${
                           companies[index % companies.length]

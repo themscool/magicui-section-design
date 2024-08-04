@@ -1,4 +1,6 @@
 import Marquee from "@/components/magicui/marquee";
+import Image from 'next/image';
+
 const companies = [
   "Google",
   "Microsoft",
@@ -19,8 +21,10 @@ export default  function Companies() {
           <div className="relative mt-6">
             <Marquee className="max-w-full [--duration:40s]">
               {companies.map((logo, idx) => (
-                <img
+                <Image
                   key={idx}
+                  width={112}
+                  height={40}
                   src={`https://cdn.magicui.design/companies/${logo}.svg`}
                   className="h-10 w-28 dark:brightness-0 dark:invert grayscale opacity-30"
                   alt={logo}

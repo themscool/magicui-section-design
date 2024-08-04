@@ -3,6 +3,8 @@ import Logo from "../../../../public/assets/logo_icon.svg";
 import { FaTwitter } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa6";
+import Image from 'next/image';
+
 
 const footer = () => {
   return (
@@ -13,7 +15,7 @@ const footer = () => {
           title="brand-logo"
           className="relative mr-6 flex items-center space-x-2"
         >
-          <img src={Logo.src} alt="Magic UI" className="w-auto h-[40px]" />
+          <Image src={Logo} alt="Magic UI" className="w-auto h-[40px]" />
           <span className="font-bold text-xl">Sections</span>
         </a>
       </div>

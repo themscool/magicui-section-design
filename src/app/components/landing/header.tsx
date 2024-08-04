@@ -3,6 +3,7 @@ import Logo from "../../../../public/assets/logo_icon.svg";
 
 import Menu from "@/app/components/landing/menu";
 import { IoMenuSharp } from "react-icons/io5";
+import Image from 'next/image';
 
 const header = () => {
   return (
@@ -16,8 +17,8 @@ const header = () => {
                 title="brand-logo"
                 className="relative mr-6 flex items-center space-x-2"
               >
-                <img
-                  src={Logo.src}
+                <Image
+                  src={Logo}
                   alt="Magic UI"
                   className="w-auto h-[40px]"
                 />
