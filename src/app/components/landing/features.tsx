@@ -88,21 +88,21 @@ const cardData: CardDataProps[] = [
     title: "Title",
     content:
       "Effective marketing and advertising materials. It is also a great tool to use when you want to present your.",
-    image:"/assets/img_container.svg",
+    image: "/assets/img_container.svg",
   },
   {
     id: 2,
     title: "Title",
     content:
       "Effective marketing and advertising materials. It is also a great tool to use when you want to present your.",
-    image:"/assets/img_container.svg",
+    image: "/assets/img_container.svg",
   },
   {
     id: 3,
     title: "Title",
     content:
       "Effective marketing and advertising materials. It is also a great tool to use when you want to present your.",
-    image:"/assets/img_container.svg",
+    image: "/assets/img_container.svg",
   },
 ];
 
@@ -244,13 +244,17 @@ const Feature = ({
                     </div>
                     <div className="flex items-center relative">
                       <div>
-                        <div className="item-box w-[90px] h-[90px] bg-themeGray rounded-full sm:mx-6 mx-2"> </div>
+                        <div className="item-box w-[90px] h-[90px] bg-themeGray rounded-full sm:mx-6 mx-2">
+                          {" "}
+                        </div>
                       </div>
                       <div>
                         <AccordionTrigger className="text-xl font-bold">
                           {item.title}
                         </AccordionTrigger>
-                        <AccordionTrigger className="justify-start text-left leading-4 font-sans text-[16px]">{item.content}</AccordionTrigger>
+                        <AccordionTrigger className="justify-start text-left leading-4 font-sans text-[16px]">
+                          {item.content}
+                        </AccordionTrigger>
                       </div>
                     </div>
                   </AccordionItem>
@@ -328,9 +332,10 @@ const Feature = ({
   );
 };
 
-export default function FeatureSection() {
+function FeatureSection() {
   return <Feature collapseDelay={5000} linePosition="left" />;
 }
 
+Feature.displayName = "Feature";
 
-Feature.displayName = 'Feature';
+export default Feature;
