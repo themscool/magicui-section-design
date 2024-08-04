@@ -3,7 +3,7 @@ import MarqueClient from "@/app/components/landing/marqueClient";
 
 const featurePatch = () => {
   return (
-    <section className="max-w-6xl mx-auto flex py-16 items-center">
+    <section className="max-w-6xl mx-auto flex py-16 items-center overflow-hidden">
       <div className="container">
         <div className="lg:max-w-2xl mx-auto">
           <div className="text-center">

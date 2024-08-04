@@ -1,5 +1,4 @@
 import Marquee from "@/components/magicui/marquee";
-
 const companies = [
   "Google",
   "Microsoft",
