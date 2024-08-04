@@ -167,7 +167,7 @@ const Feature = ({
     }, collapseDelay);
 
     return () => clearInterval(timer);
-  }, [currentIndex]);
+  }, [collapseDelay, cardData.length]);
 
   useEffect(() => {
     const handleAutoScroll = () => {
@@ -175,11 +175,11 @@ const Feature = ({
         (currentIndex !== undefined ? currentIndex + 1 : 0) % cardData.length;
       scrollToIndex(nextIndex);
     };
-
+  
     const autoScrollTimer = setInterval(handleAutoScroll, collapseDelay);
-
+  
     return () => clearInterval(autoScrollTimer);
-  }, [currentIndex]);
+  }, [currentIndex, collapseDelay, cardData.length]);
 
   useEffect(() => {
     const carousel = carouselRef.current;
