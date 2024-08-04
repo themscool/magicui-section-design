@@ -11,10 +11,7 @@ import {
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+ 
 } from "@/components/ui/card";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
 const chartData = [
@@ -33,7 +30,7 @@ const chartConfig = {
 
 export default function Component() {
   return (
-    <Card className="border-none">
+    <Card className="border-none shadow-none">
       <CardContent className="flex items-center">
         <div>
           <ChartContainer

@@ -48,7 +48,7 @@ const chartConfig = {
 
 export default function Component() {
   return (
-    <Card className="flex flex-col border-none">
+    <Card className="flex flex-col border-none shadow-none">
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}

@@ -331,3 +331,6 @@ const Feature = ({
 export default function FeatureSection() {
   return <Feature collapseDelay={5000} linePosition="left" />;
 }
+
+
+Feature.displayName = 'Feature';
