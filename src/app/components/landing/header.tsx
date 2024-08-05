@@ -7,7 +7,7 @@ import Image from "next/image";
 import Drawer from "@/app/components/landing/drawer";
 import BlurFade from "@/components/magicui/blur-fade";
 
-const header = () => {
+const Header = () => {
   const [addBorder, setAddBorder] = useState(false);
 
   useEffect(() => {
@@ -73,4 +73,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
