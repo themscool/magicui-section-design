@@ -37,7 +37,7 @@ const header = () => {
                 </div>
               </div>
             </div>
-            <div className=" cursor-pointer block lg:hidden">
+            <div className="mt-2 cursor-pointer block lg:hidden">
               <Drawer />
             </div>
           </div>
