@@ -1,7 +1,7 @@
 import * as React from "react";
 import { MdOutlineFormatQuote } from "react-icons/md";
 import Image from "next/image";
-
+import BlurFade from "@/components/magicui/blur-fade";
 import {
   Carousel,
   CarouselContent,
@@ -32,38 +32,49 @@ export default function CarouselDemo() {
                 <div className="p-1">
                   <div className=" text-center">
                     <MdOutlineFormatQuote className="text-4xl text-themeDarkGray my-4 mx-auto" />
-                    <h4 className="text-1xl font-semibold">
-                      There is a lot of exciting stuff going on in the stars
-                      above us that make astronomy so much fun. The truth is the
-                      universe is a constantly changing, moving, some would say
-                      “living” thing because you just never know what you are
-                      going to see on any given night of stargazing.
-                    </h4>
-                    <div className="mt-8">
-                      <Image
-                        width={0}
-                        height={40}
-                        key={index}
-                        src={`https://cdn.magicui.design/companies/${
-                          companies[index % companies.length]
-                        }.svg`}
-                        alt={`${companies[index % companies.length]} Logo`}
-                        className="mx-auto w-auto h-[40px] grayscale opacity-30"
-                      />
-                    </div>
-                    <div className="">
-                      <h4 className="text-1xl font-semibold my-2">
-                        Leslie Alexander
+                    <BlurFade delay={0.25} inView>
+                      <h4 className="text-1xl font-semibold">
+                        There is a lot of exciting stuff going on in the stars
+                        above us that make astronomy so much fun. The truth is
+                        the universe is a constantly changing, moving, some
+                        would say “living” thing because you just never know
+                        what you are going to see on any given night of
+                        stargazing.
                       </h4>
+                    </BlurFade>
+                    <BlurFade delay={0.25 * 2} inView>
+                      <div className="mt-8">
+                        <Image
+                          width={0}
+                          height={40}
+                          key={index}
+                          src={`https://cdn.magicui.design/companies/${
+                            companies[index % companies.length]
+                          }.svg`}
+                          alt={`${companies[index % companies.length]} Logo`}
+                          className="mx-auto w-auto h-[40px] grayscale opacity-30"
+                        />
+                      </div>
+                    </BlurFade>
+                    <div className="">
+                      <BlurFade delay={0.25 * 3} inView>
+                        <h4 className="text-1xl font-semibold my-2">
+                          Leslie Alexander
+                        </h4>
+                      </BlurFade>
                     </div>
-                    <div className=" mb-3">
-                      <span className="text-sm text-themeDarkGray">
-                        UI Designer
-                      </span>
-                    </div>
-                    <a href="" className="text-themePrimary font-semibold">
-                      Learn more
-                    </a>
+                    <BlurFade delay={0.25 * 4} inView>
+                      <div className=" mb-3">
+                        <span className="text-sm text-themeDarkGray">
+                          UI Designer
+                        </span>
+                      </div>
+                    </BlurFade>
+                    <BlurFade delay={0.25 * 5} inView>
+                      <a href="" className="text-themePrimary font-semibold">
+                        Learn more
+                      </a>
+                    </BlurFade>
                   </div>
                 </div>
               </CarouselItem>

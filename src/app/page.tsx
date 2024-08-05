@@ -9,6 +9,7 @@ import NewsLetter from '@/app/components/landing/newsletter'
 import Footer from '@/app/components/landing/footer'
 import CopyRight from '@/app/components/landing/copyright'
 import Features from '@/app/components/landing/features'
+import BlurFade from "@/components/magicui/blur-fade";
 
 
 export default function Home() {

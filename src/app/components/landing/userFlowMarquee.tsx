@@ -10,7 +10,7 @@ import React, {
 import * as Accordion from "@radix-ui/react-accordion";
 import { motion, useInView } from "framer-motion";
 import { BorderBeam } from "@/components/magicui/border-beam";
-
+import BlurFade from "@/components/magicui/blur-fade";
 
 import { cn } from "@/lib/utils";
 
@@ -23,7 +23,7 @@ const AccordionItem = forwardRef<HTMLDivElement, AccordionItemProps>(
   ({ children, className, ...props }, forwardedRef) => (
     <Accordion.Item
       className={cn(
-        "mt-px overflow-hidden focus-within:relative focus-within:z-10",
+        "mt-px  focus-within:relative focus-within:z-10",
         className
       )}
       {...props}
@@ -34,7 +34,7 @@ const AccordionItem = forwardRef<HTMLDivElement, AccordionItemProps>(
   )
 );
 
-AccordionItem.displayName = 'AccordionItem';
+AccordionItem.displayName = "AccordionItem";
 type AccordionTriggerProps = {
   children: React.ReactNode;
   className?: string;
@@ -44,10 +44,7 @@ const AccordionTrigger = forwardRef<HTMLButtonElement, AccordionTriggerProps>(
   ({ children, className, ...props }, forwardedRef) => (
     <Accordion.Header className="">
       <Accordion.Trigger
-        className={cn(
-          "",
-          className
-        )}
+        className={cn("", className)}
         {...props}
         ref={forwardedRef}
       >
@@ -56,7 +53,7 @@ const AccordionTrigger = forwardRef<HTMLButtonElement, AccordionTriggerProps>(
     </Accordion.Header>
   )
 );
-AccordionTrigger.displayName = 'AccordionTrigger';
+AccordionTrigger.displayName = "AccordionTrigger";
 type AccordionContentProps = {
   children: ReactNode;
   className?: string;
@@ -76,7 +73,7 @@ const AccordionContent = forwardRef<HTMLDivElement, AccordionContentProps>(
     </Accordion.Content>
   )
 );
-AccordionContent.displayName = 'AccordionContent';
+AccordionContent.displayName = "AccordionContent";
 type CardDataProps = {
   id: number;
   title: string;
@@ -89,29 +86,25 @@ const cardData: CardDataProps[] = [
   {
     id: 1,
     title: "Title",
-    content:
-      "Effective marketing and advertising materials.",
+    content: "Effective marketing and advertising materials.",
     image: "/assets/safari_svg.svg",
   },
   {
     id: 2,
     title: "Title",
-    content:
-      "Effective marketing and advertising materials.",
+    content: "Effective marketing and advertising materials.",
     image: "/assets/safari_svg.svg",
   },
   {
     id: 3,
     title: "Title",
-    content:
-      "Effective marketing and advertising materials.",
+    content: "Effective marketing and advertising materials.",
     image: "/assets/safari_svg.svg",
   },
   {
     id: 4,
     title: "Title",
-    content:
-      "Effective marketing and advertising materials.",
+    content: "Effective marketing and advertising materials.",
     image: "/assets/safari_svg.svg",
   },
 ];
@@ -276,24 +269,34 @@ const Feature = ({
                     ) : null}
                     <div className="">
                       <div className="text-center">
-                        <div>
-                          <div className="item-box w-[64px] h-[64px] bg-themeGray rounded-full mx-auto">
-                            {" "}
+                        <BlurFade delay={0.25} inView>
+                          <div>
+                            <div className="item-box w-[64px] h-[64px] bg-themeGray rounded-full mx-auto">
+                              {" "}
+                            </div>
                           </div>
-                        </div>
-                        <AccordionTrigger className="font-bold text-xl my-3 ">
-                          {item.title}
-                        </AccordionTrigger>
-                        <AccordionTrigger className="justify-center text-center mb-4">
-                          {item.content}
-                        </AccordionTrigger>
+                        </BlurFade>
+                        <BlurFade delay={0.25 * 2} inView>
+                          <AccordionTrigger className="font-bold text-xl my-3 ">
+                            {item.title}
+                          </AccordionTrigger>
+                        </BlurFade>
+                        <BlurFade delay={0.25 * 3} inView>
+                          <AccordionTrigger className="justify-center text-center mb-4">
+                            {item.content}
+                          </AccordionTrigger>
+                        </BlurFade>
                       </div>
                     </div>
                   </AccordionItem>
                 ))}
               </Accordion.Root>
             </div>
-            <div className={`w-auto h-[100%] relative rounded-lg ${ltr && "md:order-1"}`}>
+            <div
+              className={`w-auto h-[100%] relative rounded-lg ${
+                ltr && "md:order-1"
+              }`}
+            >
               {cardData[currentIndex]?.image ? (
                 <motion.img
                   key={currentIndex}
@@ -305,9 +308,7 @@ const Feature = ({
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
                 />
-              )
-              
-              : cardData[currentIndex]?.video ? (
+              ) : cardData[currentIndex]?.video ? (
                 <video
                   preload="auto"
                   src={cardData[currentIndex].video}
@@ -315,12 +316,18 @@ const Feature = ({
                   autoPlay
                   loop
                   muted
-                  
                 />
-              ) : (                
+              ) : (
                 <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 bg-gray-200 p-1"></div>
               )}
-              <BorderBeam size={250} duration={12} delay={9} borderWidth={2.5} colorFrom="#ff6c47" colorTo="#a3a3a3" />
+              <BorderBeam
+                size={250}
+                duration={12}
+                delay={9}
+                borderWidth={2.5}
+                colorFrom="#ff6c47"
+                colorTo="#a3a3a3"
+              />
             </div>
 
             <ul

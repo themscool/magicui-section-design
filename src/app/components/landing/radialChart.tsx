@@ -7,12 +7,8 @@ import {
   RadialBar,
   RadialBarChart,
 } from "recharts";
-
-import {
-  Card,
-  CardContent,
- 
-} from "@/components/ui/card";
+import BlurFade from "@/components/magicui/blur-fade";
+import { Card, CardContent } from "@/components/ui/card";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
 const chartData = [
   { browser: "safari", visitors: 1260, fill: "var(--color-safari)" },
@@ -72,8 +68,12 @@ export default function Component() {
           </ChartContainer>
         </div>
         <div className="ml-5">
-          <h2 className="font-semibold text-xl">Title</h2>
-          <p>Effective marketing and advertising materials.</p>
+          <BlurFade delay={0.25} inView>
+            <h2 className="font-semibold text-xl">Title</h2>
+          </BlurFade>
+          <BlurFade delay={0.25 * 2} inView>
+            <p>Effective marketing and advertising materials.</p>
+          </BlurFade>
         </div>
       </CardContent>
     </Card>

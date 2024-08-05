@@ -1,6 +1,7 @@
 import React from "react";
 import Roundchart from "@/app/components/landing/pieChart";
 import RadialCharts from "@/app/components/landing/radialChart";
+import BlurFade from "@/components/magicui/blur-fade";
 
 const chartSection = () => {
   return (
@@ -8,11 +9,15 @@ const chartSection = () => {
       <div className="container">
         <div className="lg:max-w-2xl mx-auto">
           <div className="text-center">
-            <h2 className="text-4xl font-bold">Our Approach to UX Design</h2>
-            <p className="my-5">
-              Effective marketing and advertising materials. It is also a great
-              tool to use when you want to present your.
-            </p>
+            <BlurFade delay={0.25} inView>
+              <h2 className="text-4xl font-bold">Our Approach to UX Design</h2>
+            </BlurFade>
+            <BlurFade delay={0.25 * 2} inView>
+              <p className="my-5">
+                Effective marketing and advertising materials. It is also a
+                great tool to use when you want to present your.
+              </p>
+            </BlurFade>
           </div>
         </div>
 

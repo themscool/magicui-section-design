@@ -1,7 +1,8 @@
 "use client";
 
-import { TrendingUp } from "lucide-react";
 import { Pie, PieChart } from "recharts";
+import BlurFade from "@/components/magicui/blur-fade";
+
 
 import {
   Card,
@@ -64,10 +65,13 @@ export default function Component() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
+      <BlurFade delay={0.25 * 3} inView>
+
         <div className="leading-2 text-muted-foreground text-center">
           Effective marketing and advertising materials. It is also a great
           tool.
         </div>
+        </BlurFade>
       </CardFooter>
     </Card>
   );

@@ -9,6 +9,7 @@ import React, {
 } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import { motion, useInView } from "framer-motion";
+import BlurFade from "@/components/magicui/blur-fade";
 
 import { cn } from "@/lib/utils";
 
@@ -31,7 +32,7 @@ const AccordionItem = forwardRef<HTMLDivElement, AccordionItemProps>(
     </Accordion.Item>
   )
 );
-AccordionItem.displayName = 'AccordionItem';
+AccordionItem.displayName = "AccordionItem";
 
 type AccordionTriggerProps = {
   children: React.ReactNode;
@@ -43,7 +44,7 @@ const AccordionTrigger = forwardRef<HTMLButtonElement, AccordionTriggerProps>(
     <Accordion.Header className="flex">
       <Accordion.Trigger
         className={cn(
-          "group flex h-[45px] flex-1 cursor-pointer items-center justify-between px-5 text-[15px] leading-none outline-none",
+          "group flex flex-1 cursor-pointer items-center justify-between px-5 text-[15px] leading-none outline-none",
           className
         )}
         {...props}
@@ -54,7 +55,7 @@ const AccordionTrigger = forwardRef<HTMLButtonElement, AccordionTriggerProps>(
     </Accordion.Header>
   )
 );
-AccordionTrigger.displayName = 'AccordionTrigger';
+AccordionTrigger.displayName = "AccordionTrigger";
 type AccordionContentProps = {
   children: ReactNode;
   className?: string;
@@ -74,7 +75,7 @@ const AccordionContent = forwardRef<HTMLDivElement, AccordionContentProps>(
     </Accordion.Content>
   )
 );
-AccordionContent.displayName = 'AccordionContent';
+AccordionContent.displayName = "AccordionContent";
 type CardDataProps = {
   id: number;
   title: string;
@@ -175,9 +176,9 @@ const Feature = ({
         (currentIndex !== undefined ? currentIndex + 1 : 0) % cardData.length;
       scrollToIndex(nextIndex);
     };
-  
+
     const autoScrollTimer = setInterval(handleAutoScroll, collapseDelay);
-  
+
     return () => clearInterval(autoScrollTimer);
   }, [currentIndex, collapseDelay, cardData.length]);
 
@@ -243,19 +244,27 @@ const Feature = ({
                         }}
                       ></div>
                     </div>
+
                     <div className="flex items-center relative">
+                    <BlurFade delay={0.25} inView>
+
                       <div>
                         <div className="item-box w-[90px] h-[90px] bg-themeGray rounded-full sm:mx-6 mx-2">
                           {" "}
                         </div>
                       </div>
+                      </BlurFade>
                       <div>
-                        <AccordionTrigger className="text-xl font-bold">
-                          {item.title}
-                        </AccordionTrigger>
-                        <AccordionTrigger className="justify-start text-left leading-4 font-sans text-[16px]">
-                          {item.content}
-                        </AccordionTrigger>
+                        <BlurFade delay={0.25 * 2} inView>
+                          <AccordionTrigger className="text-xl font-bold">
+                            {item.title}
+                          </AccordionTrigger>
+                        </BlurFade>
+                        <BlurFade delay={0.25 * 3} inView>
+                          <AccordionTrigger className="justify-start text-left leading-4 font-sans text-[16px]">
+                            {item.content}
+                          </AccordionTrigger>
+                        </BlurFade>
                       </div>
                     </div>
                   </AccordionItem>
